@@ -28,7 +28,7 @@ pub fn spawn_enemy(ecs: &mut World, rng: &mut RandomNumberGenerator, pos: Point)
             color: ColorPair::new(WHITE, BLACK),
             glyph,
         },
-        MovingRandomly {},
+        ChasingPlayer {},
         Health {
             current: hp,
             max: hp,
@@ -44,3 +44,10 @@ fn goblin() -> (i32, String, FontCharType) {
 fn orc() -> (i32, String, FontCharType) {
     (2, "Orc".to_string(), to_cp437('o'))
 }
+
+/*
+ideas
+ - add different damage abilities - like health
+ - other monsters
+ - some move randomly and some chase
+*/
